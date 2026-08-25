@@ -1,0 +1,16 @@
+name: Basic Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      appName:
+        type: String
+        required: true
+        description: 'Provide an app name'
+
+jobs:
+  basic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Basic App
+        run: echo "\"${{ github.events.appName }}\" Launched!! 🎉"
