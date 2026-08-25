@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy Basic App
-        run: echo "\"${{ github.events.appName }}\" Launched!! 🎉"
+        run: echo "${{ github.event.inputs.appName }}" Launched!! 🎉
